@@ -108,6 +108,18 @@ public class Inventory implements  IVisitable{
             inventory.updateQuality();
             inventory.printInventory();
         }
+
+        inventory.accept(new UpdateVisitor() {
+            @Override
+            public void visit(Inventory inventory) {
+
+            }
+
+            @Override
+            public void accept(IVisitor v) {
+
+            }
+        });
        // InventoryTest invt= new InventoryTest();
     }
 
