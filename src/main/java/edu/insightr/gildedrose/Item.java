@@ -1,6 +1,6 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public abstract class  Item implements IVisitable{
 
     protected String name;
     protected int sellIn;
@@ -38,8 +38,10 @@ public class Item {
     }
 
 
-
-
+    @Override
+    public void accepte(IVistor v) {
+        v.Visite(this);
+    }
 
     @Override
     public String toString() {
