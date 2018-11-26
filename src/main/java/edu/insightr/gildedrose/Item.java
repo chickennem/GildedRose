@@ -13,6 +13,10 @@ public abstract class  Item implements IVisitable{
         this.quality = quality;
     }
 
+    public Item() {
+        super();
+    }
+
     public String getName() {
         return name;
     }
@@ -39,11 +43,6 @@ public abstract class  Item implements IVisitable{
 
 
     @Override
-    public void accepte(IVistor v) {
-        v.Visite(this);
-    }
-
-    @Override
     public String toString() {
         return "Item{" +
                 "name='" + name + '\'' +
@@ -51,4 +50,6 @@ public abstract class  Item implements IVisitable{
                 ", quality=" + quality +
                 '}';
     }
+
+
 }
